@@ -1,0 +1,45 @@
+/* Container for the entire Todo List */
+.todo-list-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #30423e;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Subtle hover effect for the list container */
+.todo-list-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* The actual list of tasks */
+.todo-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Empty list message */
+.empty-list-message {
+  font-size: 16px;
+  color: #888;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .todo-list-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .empty-list-message {
+    font-size: 14px;
+  }
+}

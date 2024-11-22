@@ -1,0 +1,86 @@
+/* Container for the Todo Item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3a353581;
+  color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(190, 160, 160, 0.15);
+}
+
+/* Text container */
+.todo-text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #f7f3f3;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Completed task styling */
+.todo-item.completed .todo-text span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-text:hover {
+  color: #007bff;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d9363e;
+  transform: scale(1.1);
+}
+
+.delete-btn:active {
+  background-color: #b82b2f;
+  transform: scale(0.95);
+}
+
+/* Font Awesome icon inside delete button */
+.delete-btn i {
+  font-size: 18px;
+}
+
+/* Add smoothness for mobile responsiveness */
+@media (max-width: 768px) {
+  .todo-item {
+    padding: 8px 12px;
+  }
+
+  .todo-text {
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
